@@ -1,0 +1,41 @@
+<html>
+  <head>
+  <meta charset="utf-8">
+<!--
+ This example uses:
+ * the FlightXML2 FlightInfoEx and DecodeFlightRoute functions over REST:
+      http://flightaware.com/commercial/flightxml/
+ * Google Maps API:
+      http://code.google.com/apis/visualization/documentation/gallery/map.html
+ * jQuery, hosted by Google API
+-->
+
+<script type="text/javascript">
+
+
+
+
+
+$.ajax(
+    type:'GET',
+    url:"https://flightxml.flightaware.com/json/FlightXML2/FlightInfoEx",
+    data:"ident=UAL5&howMany=3",
+    success:function(feed) {
+        document.write(feed);
+    },
+    dataType:'jsonp'
+
+);
+
+console.log(feed.status)
+
+
+</head>
+
+<body>
+</body>
+
+
+
+
+  </html>
